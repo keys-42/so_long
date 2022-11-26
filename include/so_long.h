@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/11/27 02:50:12 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/27 04:33:40 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,16 @@
 # include <sys/stat.h>
 # include <sys/types.h>
 
-typedef struct s_map
+typedef struct s_maps
 {
 	char	**map;
 	int fd;
-}			t_map;
+}			t_maps;
+
+typedef struct s_line
+{
+	char	**map;
+}			t_line;
+
+
 #endif
