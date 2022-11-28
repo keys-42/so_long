@@ -1,14 +1,14 @@
 NAME	= 	gnl.a
 
-# CC 		= 	gcc
-CC 		= 	clang
+CC 		= 	cc
+# CC 		= 	clang
 
-INCLUDE = -I g./
+INCLUDE = -I ../include/
 
 # CFLAGS	=	-Wall -Wextra
-# CFLAGS	=	-Wall -Werror -Wextra -D BUFFER_SIZE=42
-CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined -fsanitize=integer
-CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined -fsanitize=integer -D BUFFER_SIZE=42
+CFLAGS	=	-Wall -Werror -Wextra -D BUFFER_SIZE=42
+# CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined -fsanitize=integer
+# CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined -fsanitize=integer -D BUFFER_SIZE=42
 
 SRCS		= 	get_next_line.c	\
 				get_next_line_utils.c

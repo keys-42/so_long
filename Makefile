@@ -1,17 +1,21 @@
 NAME 		=	so_long
 CC			=	cc
 # CC			=	clang
-# CFLAGS		=	-Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined -fsanitize=integer
-CFLAGS		=	-Wall -Wextra -Werror
-INCLUDE		=	-I ./include
-PRINTFDIR	=	ft_printf
-PRINTFNAME		=	$(PRINTFDIR)/libftprintf.a
-PRINTF		=	$(PRINTFNAME)
-GNLDIR	=get_next_line
-GNLNAME		=	$(GNLDIR)/get_next_line.a
-GNL		=	$(GNLNAME)
+CFLAGS		=	-Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined
+# CFLAGS		=	-Wall -Wextra -Werror
+INCLUDE		=	-I ./include/
 
-SRCS		=
+GNLDIR		=	get_next_line
+GNLNAME		=	$(GNLDIR)/gnl.a
+GNL			=	$(GNLNAME)
+
+SRCS		= 	main.c	\
+				utils.c	\
+				check_arg.c	\
+				make_map.c	\
+				check_around_map.c \
+				check_person.c	\
+				check_exit.c
 
 
 
@@ -21,31 +25,28 @@ OBJS  = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(PRINTFNAME) $(GNLNAME)
+$(NAME): $(OBJS) $(GNL)
 		$(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS)
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $$(dirname $@)
 	$(CC) $(INCLUDE) $(CFLAGS) -o $@ -c $<
 
-$(PRINTFNAME):
-		$(MAKE) -C $(PRINTFDIR)
-printf:
-		$(MAKE) -C $(PRINTFDIR)
-$(GNLNAME):
+
+$(GNL):
 		$(MAKE) -C $(GNLDIR)
 gnl:
-		$(MAKE) -C $(GNLDIR)
+		$(MAKE) --no-print-directory -C $(GNLDIR)
 
 clean:
-		$(MAKE) clean -C $(PRINTFDIR)
+		$(MAKE) --no-print-directory clean -C $(GNLDIR)
 		$(RM) -r $(OBJDIR)
 
 fclean: clean
-		$(MAKE) fclean -C $(PRINTFDIR)
+		$(MAKE) --no-print-directory fclean -C $(GNLDIR)
 		$(RM) $(NAME)
 
 re : fclean all
 
 .PHONY:
-		all clean fclean re printf gnl
+		all clean fclean re gnl

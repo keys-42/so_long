@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:00:51 by keys              #+#    #+#             */
-/*   Updated: 2022/11/27 04:55:21 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/29 00:55:19 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,12 +119,6 @@
 // 	exit(EXIT_FAILURE);
 // }
 
-void	ft_check_arg_num(int argc)
-{
-	if (argc != 2)
-		exit(EXIT_FAILURE);
-}
-
 // void	*ft_realloc(void **memory, size_t size)
 // {
 // 	void	*tmp;
@@ -143,99 +137,74 @@ void	ft_check_arg_num(int argc)
 // 	return (tmp);
 // }
 
-void	ft_split_free(char **argv)
-{
-	int	i;
+// void	ft_split_free(char **argv)
+// {
+// 	int	i;
 
-	i = 0;
-	if (argv)
-	{
-		while (argv[i])
-			i++;
-		i--;
-		while (i >= 0)
-		{
-			free(argv[i]);
-			i--;
-		}
-		free(argv);
-	}
-}
+// 	i = 0;
+// 	if (argv)
+// 	{
+// 		while (argv[i])
+// 			i++;
+// 		i--;
+// 		while (i >= 0)
+// 		{
+// 			free(argv[i]);
+// 			i--;
+// 		}
+// 		free(argv);
+// 	}
+// }
 
-size_t	ft_split_len(char **argv)
-{
-	size_t	len;
+// size_t	ft_split_len(char **argv)
+// {
+// 	size_t	len;
 
-	len = 0;
-	while (argv[len])
-		len++;
-	return (len);
-}
+// 	len = 0;
+// 	while (argv[len])
+// 		len++;
+// 	return (len);
+// }
 
-char	**ft_malloc_gnl(char **map)
-{
-	char	**tmp;
-	size_t	size;
-	size_t	len;
-	int		i;
-	int		j;
+// char	**ft_malloc_gnl(char **map)
+// {
+// 	char	**tmp;
+// 	size_t	size;
+// 	size_t	len;
+// 	int		i;
+// 	int		j;
 
-	i = 0;
-	j = 0;
-	size = ft_split_len(map);
-	tmp = (char **)malloc(sizeof(char *) * (size + 1));
-	if (!tmp)
-		return (NULL);
-	tmp[size] = NULL;
-	while (size--)
-	{
-		len = ft_strlen(map[len]);
-		ft_memmove(tmp[size], map[size], len + 1);
-	}
-	ft_split_free(map);
-	return (tmp);
-}
+// 	i = 0;
+// 	j = 0;
+// 	size = ft_split_len(map);
+// 	tmp = (char **)malloc(sizeof(char *) * (size + 1));
+// 	if (!tmp)
+// 		return (NULL);
+// 	tmp[size] = NULL;
+// 	while (size--)
+// 	{
+// 		len = ft_strlen(map[len]);
+// 		ft_memmove(tmp[size], map[size], len + 1);
+// 	}
+// 	ft_split_free(map);
+// 	return (tmp);
+// }
 
-char	**ft_get_map(int file_descriptor)
-{
-	char	**map;
-	char	*tmp;
-	size_t	i;
-
-	i = 0;
-	map = (char **)malloc(sizeof(char *) * 1);
-	if (!map)
-		exit(EXIT_FAILURE);
-	while (1)
-	{
-		map[i] = get_next_line(file_descriptor);
-		if (!map[i])
-			break ;
-		i++;
-		map = ft_malloc_gnl(map);
-	}
-	return (map);
-}
-
-void	ft_make_map(char *txt)
-{
-	int		file_descriptor;
-	char	**map;
-
-	file_descriptor = open(txt, O_RDONLY);
-	if (file_descriptor < 0)
-		exit(EXIT_FAILURE);
-	ft_get_map(file_descriptor);
-	// return (maps);
-}
 
 int	main(int argc, char **argv)
 {
-	// t_maps	*maps;
-	ft_check_arg_num(argc);
-	// maps = malloc(sizeof(t_maps));
-	ft_make_map(argv[1]);
-	// maps = ft_make_map(argv[1]);
-	// ft_check_map();
+	t_maps	*maps;
+
+	ft_new_maps(&maps);
+	ft_check_arg_num(argc, argv, &maps);
+
+	// int i;
+	// i = 0;
+	// while(maps->map[i])
+	// {
+	// 	printf("%d =%s",i,maps->map[i]);
+	// 	i++;
+	// }
+	ft_free_maps(&maps, 1);
 	return (0);
 }
