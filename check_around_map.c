@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:54:12 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 00:40:40 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/29 16:42:29 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static bool	ft_upper_lower_wall_check(char *line)
 
 void	ft_around_map_check(t_maps **maps)
 {
-	int		i;
+	size_t	i;
 	bool	flag;
 
 	i = 0;
@@ -70,6 +70,7 @@ void	ft_around_map_check(t_maps **maps)
 				printf("lower\n");
 				ft_free_maps(maps, 1);
 			}
+			return;
 		}
 		else
 		{

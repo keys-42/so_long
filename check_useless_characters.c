@@ -1,58 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_exit.c                                       :+:      :+:    :+:   */
+/*   check_useless_characters.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 00:56:55 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 16:49:58 by keys             ###   ########.fr       */
+/*   Created: 2022/11/29 16:55:37 by keys              #+#    #+#             */
+/*   Updated: 2022/11/29 17:08:40 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static int	ft_exit_position(char *line)
+static bool	ft_check_useless(char c)
 {
-	int	i;
-	int	ans;
-
-	ans = 0;
-	i = 0;
-	while (1)
-	{
-		if (line[i] == '\n')
-			break ;
-		else
-		{
-			if (line[i] == 'E')
-				ans++;
-		}
-		i++;
-	}
-	return (ans);
+	return ((c == '1') || (c == '0' || c == 'P' || c == 'E' || c == 'C'
+			|| c == '\n'));
 }
 
-void	ft_check_exit(t_maps **maps)
+void	ft_useless_characters(t_maps **maps)
 {
-	int	i;
-	int	num;
+	int		i;
+	int		k;
+	bool	flag;
 
-	i = 1;
-	num = 0;
+	i = 0;
 	while ((*maps)->map[i])
 	{
-		if ((*maps)->map[i + 1] == NULL)
-			return ;
-		else
+		k = 0;
+		while ((*maps)->map[i][k])
 		{
-			num += ft_exit_position((*maps)->map[i]);
+			flag = ft_check_useless((*maps)->map[i][k]);
+			printf("%c", (*maps)->map[i][k]);
+			if (flag == false)
+			{
+				printf("useless characters\n");
+				ft_free_maps(maps, 1);
+			}
+			k++;
 		}
 		i++;
-	}
-	if (num < 1 || 2 <= num)
-	{
-		printf("exit num =%d\n", num);
-		ft_free_maps(maps, 1);
 	}
 }

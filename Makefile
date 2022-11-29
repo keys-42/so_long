@@ -14,9 +14,11 @@ SRCS		= 	main.c	\
 				check_arg.c	\
 				make_map.c	\
 				check_around_map.c \
-				check_person.c	\
-				check_exit.c
-
+				check_player.c	\
+				check_exit.c	\
+				check_collectible.c	\
+				check_square.c	\
+				check_useless_characters.c
 
 
 OBJDIR   = obj

@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 01:13:41 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/29 17:06:58 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ typedef struct s_maps
 {
 	char	**map;
 	int		fd;
+	size_t	map_hight;
 }			t_maps;
-
 
 /*check_arg*/
 void		ft_check_arg_num(int argc, char **argv, t_maps **maps);
@@ -31,16 +31,24 @@ void		ft_check_arg_num(int argc, char **argv, t_maps **maps);
 void		ft_around_map_check(t_maps **maps);
 
 /*check_person*/
-void ft_check_person(t_maps **maps);
+void		ft_check_player(t_maps **maps);
 
 /*check_exit*/
-void	ft_check_exit(t_maps **maps);
+void		ft_check_exit(t_maps **maps);
+
+/*check_collection.c*/
+void		ft_check_collectible(t_maps **maps);
+
+/*check_square*/
+void		ft_check_square(t_maps **maps);
+
+/*check_useless*/
+void		ft_useless_characters(t_maps **maps);
 
 /*make_map*/
 void		ft_make_map(char *txt, t_maps **maps);
 
 /*utils*/
 void		ft_free_maps(t_maps **maps, int flag);
-void		ft_free_map(char **dst);
 void		ft_new_maps(t_maps **maps);
 #endif
