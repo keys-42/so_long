@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 16:55:37 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:08:40 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/29 17:30:51 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	ft_useless_characters(t_maps **maps)
 		while ((*maps)->map[i][k])
 		{
 			flag = ft_check_useless((*maps)->map[i][k]);
-			printf("%c", (*maps)->map[i][k]);
 			if (flag == false)
 			{
 				printf("useless characters\n");

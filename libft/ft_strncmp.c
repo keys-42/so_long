@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_square.c                                     :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 15:36:06 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:30:16 by keys             ###   ########.fr       */
+/*   Created: 2022/08/15 20:42:28 by kyoda             #+#    #+#             */
+/*   Updated: 2022/11/29 18:11:42 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
+#include <stdio.h>
 
-void	ft_check_square(t_maps **maps)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	size_t	len1;
-	size_t	len2;
 
-	len1 = ft_strlen((*maps)->map[0]);
-	i = 1;
-	while ((*maps)->map[i])
-	{
-		len2 = ft_strlen((*maps)->map[i]);
-		if (len1 != len2)
-		{
-			printf("Not_square\n");
-			ft_free_maps(maps, 1);
-		}
+	i = 0;
+	if (!n)
+		return (0);
+	while (i < n - 1 && s1[i] == s2[i] && s1[i])
 		i++;
-	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

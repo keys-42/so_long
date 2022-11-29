@@ -9,6 +9,10 @@ GNLDIR		=	get_next_line
 GNLNAME		=	$(GNLDIR)/gnl.a
 GNL			=	$(GNLNAME)
 
+FTDIR		=	libft
+FTNAME		=	$(FTDIR)/libft.a
+FT			=	$(FTNAME)
+
 SRCS		= 	main.c	\
 				utils.c	\
 				check_arg.c	\
@@ -27,28 +31,37 @@ OBJS  = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(GNL)
+$(NAME):$(OBJS) $(GNL) $(FT)
 		$(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS)
+#$(CC) $(INCLUDE) -o $(NAME) $< $(GNLNAME)  $(PRNAME) $(CFLAGS)
+
+gnl:
+		$(MAKE) --no-print-directory -C $(GNLDIR)
+$(GNL):
+		$(MAKE) -C $(GNLDIR)
+
+$(FT):
+		$(MAKE) -C $(FTDIR)
+libft:
+		$(MAKE) --no-print-directory -C $(FTDIR)
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $$(dirname $@)
 	$(CC) $(INCLUDE) $(CFLAGS) -o $@ -c $<
 
 
-$(GNL):
-		$(MAKE) -C $(GNLDIR)
-gnl:
-		$(MAKE) --no-print-directory -C $(GNLDIR)
 
 clean:
 		$(MAKE) --no-print-directory clean -C $(GNLDIR)
+		$(MAKE) --no-print-directory clean -C $(FTDIR)
 		$(RM) -r $(OBJDIR)
 
 fclean: clean
 		$(MAKE) --no-print-directory fclean -C $(GNLDIR)
+		$(MAKE) --no-print-directory fclean -C $(FTDIR)
 		$(RM) $(NAME)
 
 re : fclean all
 
 .PHONY:
-		all clean fclean re gnl
+		all clean fclean re gnl libft

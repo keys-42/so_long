@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_square.c                                     :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 15:36:06 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:30:16 by keys             ###   ########.fr       */
+/*   Created: 2022/08/15 20:41:44 by kyoda             #+#    #+#             */
+/*   Updated: 2022/11/27 05:16:13 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-void	ft_check_square(t_maps **maps)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	size_t	len1;
-	size_t	len2;
+	unsigned char	*tmp_s1;
+	unsigned char	*tmp_s2;
 
-	len1 = ft_strlen((*maps)->map[0]);
-	i = 1;
-	while ((*maps)->map[i])
+	tmp_s1 = (unsigned char *)s1;
+	tmp_s2 = (unsigned char *)s2;
+	if (n)
 	{
-		len2 = ft_strlen((*maps)->map[i]);
-		if (len1 != len2)
+		while (n--)
 		{
-			printf("Not_square\n");
-			ft_free_maps(maps, 1);
+			if (*tmp_s1 != *tmp_s2)
+				return (*tmp_s1 - *tmp_s2);
+			tmp_s1++;
+			tmp_s2++;
 		}
-		i++;
 	}
+	return (0);
 }

@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_square.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/29 15:36:06 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:30:16 by keys             ###   ########.fr       */
+/*   Created: 2022/08/27 22:27:55 by kyoda             #+#    #+#             */
+/*   Updated: 2022/11/27 11:50:32 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "libft.h"
 
-void	ft_check_square(t_maps **maps)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	size_t	len1;
-	size_t	len2;
+	int	size;
 
-	len1 = ft_strlen((*maps)->map[0]);
-	i = 1;
-	while ((*maps)->map[i])
+	size = 0;
+	while (lst)
 	{
-		len2 = ft_strlen((*maps)->map[i]);
-		if (len1 != len2)
-		{
-			printf("Not_square\n");
-			ft_free_maps(maps, 1);
-		}
-		i++;
+		lst = lst->next;
+		size++;
 	}
+	return (size);
 }

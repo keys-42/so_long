@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:47:13 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:16:53 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/29 18:14:34 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,20 @@ static void	ft_filename_check(char *filename, t_maps **maps)
 	size_t	i;
 
 	i = ft_strlen(filename);
-	filename[i] == NULL;
-	if (ft_strncmp(&filename[i - 3], ".ber"))
-		return ;
+	if (4 <= i)
+	{
+		if (ft_strncmp(&filename[i - 4], ".ber", 4) == 0)
+			return ;
+		else
+		{
+			printf("filename\n");
+			ft_free_maps(maps, 1);
+			exit(1);
+		}
+	}
 	else
 	{
+		printf("filename\n");
 		ft_free_maps(maps, 1);
 		exit(1);
 	}

@@ -6,12 +6,14 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:06:58 by keys             ###   ########.fr       */
+/*   Updated: 2022/11/29 17:43:33 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_SO_LONG_H
 # define FT_SO_LONG_H
+
+# include "../libft/libft.h"
 # include "get_next_line.h"
 # include <fcntl.h>
 # include <sys/stat.h>
