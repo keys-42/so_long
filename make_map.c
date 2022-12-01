@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:46:20 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 16:37:31 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/01 22:02:30 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static	void	ft_get_map(t_maps **maps, int i)
 		if (!((*maps)->map))
 			ft_free_maps(maps, 1);
 		(*maps)->map[i] = NULL;
-		(*maps)->map_hight = i;
 		return ;
 	}
 	else

@@ -22,7 +22,8 @@ SRCS		= 	main.c	\
 				check_exit.c	\
 				check_collectible.c	\
 				check_square.c	\
-				check_useless_characters.c
+				check_useless_characters.c \
+				dfs.c
 
 
 OBJDIR   = obj

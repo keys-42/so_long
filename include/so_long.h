@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 17:43:33 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/01 22:30:59 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ typedef struct s_maps
 {
 	char	**map;
 	int		fd;
-	size_t	map_hight;
+	size_t	hight;
+	size_t	width;
+	int 	player_i;
+	int 	player_j;
 }			t_maps;
 
 /*check_arg*/
@@ -47,10 +50,14 @@ void		ft_check_square(t_maps **maps);
 /*check_useless*/
 void		ft_useless_characters(t_maps **maps);
 
+/*dfs*/
+void	dfs(t_maps **maps);
+
 /*make_map*/
 void		ft_make_map(char *txt, t_maps **maps);
 
 /*utils*/
+void	ft_free_map(char **dst);
 void		ft_free_maps(t_maps **maps, int flag);
 void		ft_new_maps(t_maps **maps);
 #endif

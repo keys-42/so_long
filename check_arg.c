@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:47:13 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 18:14:34 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/01 22:30:09 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void	ft_check_arg_num(int argc, char **argv, t_maps **maps)
 		printf("line = %d\n", __LINE__);
 		ft_useless_characters(&(*maps));
 		printf("line = %d\n", __LINE__);
+		dfs(&(*maps));
 	}
 }
