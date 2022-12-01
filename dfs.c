@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 21:53:38 by keys              #+#    #+#             */
-/*   Updated: 2022/12/01 23:01:55 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/01 23:06:02 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,10 @@ void	dfs(t_maps **maps)
 		ft_free_maps(maps, 1);
 	*flag = 0;
 	VertSearch((*maps)->player_i, (*maps)->player_j, (*maps)->map, flag);
+	if (*flag == 0)
+	{
+		printf("Where is the goal?\n");
+		ft_free_maps(maps, 1);
+	}
 	free(flag);
 }
