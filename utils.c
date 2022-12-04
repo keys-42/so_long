@@ -6,11 +6,16 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:02:48 by keys              #+#    #+#             */
-/*   Updated: 2022/11/28 23:47:57 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/02 19:14:40 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	ft_mlx_utils_free(t_mlx_utils **data)
+{
+	ft_free_maps((*data)->maps,1);
+}
 
 void	ft_free_map(char **dst)
 {

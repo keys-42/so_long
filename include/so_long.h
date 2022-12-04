@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/01 22:30:59 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/02 19:17:49 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,34 @@
 
 # include "../libft/libft.h"
 # include "get_next_line.h"
+#include <mlx.h>
 # include <fcntl.h>
 # include <sys/stat.h>
 # include <sys/types.h>
 
+#define WINDOW_SIZE	500
 typedef struct s_maps
 {
 	char	**map;
 	int		fd;
 	size_t	hight;
 	size_t	width;
-	int 	player_i;
-	int 	player_j;
+	int		player_i;
+	int		player_j;
 }			t_maps;
+
+typedef struct s_mlx_utils
+{
+	void	*mlx;
+	void	*mlx_win;
+	void	*wall_image;
+	void	*space_image;
+	void	*player_image;
+	void	*collection_image;
+	void	*exit_image;
+	t_maps	*maps;
+
+}			t_mlx_utils;
 
 /*check_arg*/
 void		ft_check_arg_num(int argc, char **argv, t_maps **maps);
@@ -51,13 +66,13 @@ void		ft_check_square(t_maps **maps);
 void		ft_useless_characters(t_maps **maps);
 
 /*dfs*/
-void	dfs(t_maps **maps);
+void		dfs(t_maps **maps);
 
 /*make_map*/
 void		ft_make_map(char *txt, t_maps **maps);
 
 /*utils*/
-void	ft_free_map(char **dst);
+void		ft_free_map(char **dst);
 void		ft_free_maps(t_maps **maps, int flag);
 void		ft_new_maps(t_maps **maps);
 #endif

@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:00:51 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 00:55:19 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/02 19:10:41 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,9 +194,12 @@
 int	main(int argc, char **argv)
 {
 	t_maps	*maps;
+	t_mlx_utils *data;
 
 	ft_new_maps(&maps);
 	ft_check_arg_num(argc, argv, &maps);
+	data->maps=maps;
+	ft_mlx_init(&data);
 
 	// int i;
 	// i = 0;
