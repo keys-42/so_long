@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   mlx.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/27 02:00:51 by keys              #+#    #+#             */
-/*   Updated: 2022/12/05 14:21:58 by kyoda            ###   ########.fr       */
+/*   Created: 2022/12/05 14:20:48 by kyoda             #+#    #+#             */
+/*   Updated: 2022/12/05 14:32:45 by kyoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	main(int argc, char **argv)
+void    ft_mlx(t_mlx_utils **data)
 {
-	t_maps	*maps;
-	t_mlx_utils *data;
+    (*data)->mlx = mlx_init();
+    (*data)->mlx_win = mlx_new_window((*data)->mlx,pixel_hight,pixel_width,"so_long");
+    
 
-	ft_new_maps(&maps);
-	ft_check_arg_num(argc, argv, &maps);
-	data->maps=maps;
-	ft_mlx(&data);
-
-	// int i;
-	// i = 0;
-	// while(maps->map[i])
-	// {
-	// 	printf("%d =%s",i,maps->map[i]);
-	// 	i++;
-	// }
-	ft_free_maps(&maps, 1);
-	return (0);
 }

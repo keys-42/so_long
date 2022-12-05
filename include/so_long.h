@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/02 19:17:49 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/05 14:31:42 by kyoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 
 # include "../libft/libft.h"
 # include "get_next_line.h"
-#include <mlx.h>
 # include <fcntl.h>
+# include <mlx.h>
 # include <sys/stat.h>
 # include <sys/types.h>
 
-#define WINDOW_SIZE	500
+# define pixel_width 1920
+# define pixel_hight 1080
+
+# define WINDOW_SIZE 500
 typedef struct s_maps
 {
 	char	**map;
