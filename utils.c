@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:02:48 by keys              #+#    #+#             */
-/*   Updated: 2022/12/02 19:14:40 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/05 15:07:21 by kyoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_mlx_utils_free(t_mlx_utils **data)
 {
-	ft_free_maps((*data)->maps,1);
+	ft_free_maps(&(*data)->maps,1);
 }
 
 void	ft_free_map(char **dst)

@@ -13,6 +13,11 @@ FTDIR		=	libft
 FTNAME		=	$(FTDIR)/libft.a
 FT			=	$(FTNAME)
 
+MLXDIR		=	minilibx-linux
+# FTNAME		=	$(MLXDIR)/libft.a
+MLX			=	$(MLXNAME)
+LMLX		=	-L$(MLXDIR) -lmlx -lXext -lX11
+
 SRCS		= 	main.c	\
 				utils.c	\
 				check_arg.c	\
@@ -23,7 +28,8 @@ SRCS		= 	main.c	\
 				check_collectible.c	\
 				check_square.c	\
 				check_useless_characters.c \
-				dfs.c
+				dfs.c	\
+				mlx.c
 
 
 OBJDIR   = obj
@@ -32,9 +38,12 @@ OBJS  = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)
 
-$(NAME):$(OBJS) $(GNL) $(FT)
-		$(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS)
+$(NAME):$(OBJS) $(GNL) $(FT) $(MLX)
+		$(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS) -L$(MLXDIR) $(LMLX)
 #$(CC) $(INCLUDE) -o $(NAME) $< $(GNLNAME)  $(PRNAME) $(CFLAGS)
+
+$(MLX):
+		$(MAKE) -C $(MLXDIR)
 
 gnl:
 		$(MAKE) --no-print-directory -C $(GNLDIR)

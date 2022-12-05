@@ -6,7 +6,7 @@
 /*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:00:51 by keys              #+#    #+#             */
-/*   Updated: 2022/12/05 14:21:58 by kyoda            ###   ########.fr       */
+/*   Updated: 2022/12/05 15:06:27 by kyoda            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main(int argc, char **argv)
 
 	ft_new_maps(&maps);
 	ft_check_arg_num(argc, argv, &maps);
+	data= NULL;
 	data->maps=maps;
 	ft_mlx(&data);
 
