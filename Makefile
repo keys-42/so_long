@@ -18,18 +18,19 @@ MLXDIR		=	minilibx-linux
 MLX			=	$(MLXNAME)
 LMLX		=	-L$(MLXDIR) -lmlx -lXext -lX11
 
-SRCS		= 	main.c	\
-				utils.c	\
-				check_arg.c	\
-				make_map.c	\
-				check_around_map.c \
-				check_player.c	\
-				check_exit.c	\
-				check_collectible.c	\
-				check_square.c	\
-				check_useless_characters.c \
-				dfs.c	\
-				mlx.c
+SRCS		= 	srcs/main.c	\
+				srcs/utils.c	\
+				srcs/check_utils/check_arg.c	\
+				srcs/make_map.c	\
+				srcs/check_utils/check_around_map.c \
+				srcs/check_utils/check_player.c	\
+				srcs/check_utils/check_exit.c	\
+				srcs/check_utils/check_collectible.c	\
+				srcs/check_utils/check_square.c	\
+				srcs/check_utils/check_useless_characters.c \
+				srcs/check_utils/dfs.c	\
+				srcs/make_data.c
+# mlx.c
 
 
 OBJDIR   = obj
@@ -38,8 +39,11 @@ OBJS  = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)
 
-$(NAME):$(OBJS) $(GNL) $(FT) $(MLX)
-		$(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS) -L$(MLXDIR) $(LMLX)
+# $(NAME):$(OBJS) $(GNL) $(FT) $(MLX)
+$(NAME):$(OBJS) $(GNL) $(FT)
+		$(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS)
+
+# $(CC) $(INCLUDE) -o $(NAME) $^ $(CFLAGS) -L$(MLXDIR) $(LMLX)
 #$(CC) $(INCLUDE) -o $(NAME) $< $(GNLNAME)  $(PRNAME) $(CFLAGS)
 
 $(MLX):

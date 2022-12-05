@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/05 15:06:05 by kyoda            ###   ########.fr       */
+/*   Updated: 2022/12/05 15:52:37 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,9 @@ void		ft_useless_characters(t_maps **maps);
 
 /*dfs*/
 void		dfs(t_maps **maps);
+
+/*make_data*/
+t_mlx_utils	*ft_make_data(t_maps **maps);
 
 /*make_map*/
 void		ft_make_map(char *txt, t_maps **maps);

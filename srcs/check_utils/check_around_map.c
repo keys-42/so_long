@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:54:12 by keys              #+#    #+#             */
-/*   Updated: 2022/11/29 16:42:29 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/05 16:01:30 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static bool	ft_upper_lower_wall_check(char *line)
 	{
 		if (line[i] != '1')
 		{
-			printf("i = %d;if = %c",i,line[i]);
+			// printf("i = %d;if = %c",i,line[i]);
 			return (false);
 		}
 		i++;

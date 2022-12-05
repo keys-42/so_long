@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mlx.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:20:48 by kyoda             #+#    #+#             */
-/*   Updated: 2022/12/05 15:10:38 by kyoda            ###   ########.fr       */
+/*   Updated: 2022/12/05 15:21:32 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	ft_mlx(t_mlx_utils **data)
 	(*data)->mlx_win = mlx_new_window((*data)->mlx, pixel_hight, pixel_width,
 			"so_long");
 	ft_mlx_new_image(data);
-    
+
     mlx_loop((*data)->mlx);
 }

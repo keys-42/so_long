@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyoda <kyoda@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:00:51 by keys              #+#    #+#             */
-/*   Updated: 2022/12/05 15:06:27 by kyoda            ###   ########.fr       */
+/*   Updated: 2022/12/05 15:53:55 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	main(int argc, char **argv)
 {
-	t_maps	*maps;
-	t_mlx_utils *data;
+	t_maps		*maps;
+	// t_mlx_utils	*data;
 
 	ft_new_maps(&maps);
 	ft_check_arg_num(argc, argv, &maps);
-	data= NULL;
-	data->maps=maps;
-	ft_mlx(&data);
+	ft_make_data(&maps);
+	// data = ft_make_data(&maps);
 
+	// ft_mlx(&data);
 	// int i;
 	// i = 0;
 	// while(maps->map[i])
