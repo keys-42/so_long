@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:42:25 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 01:22:46 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 01:38:30 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,6 @@ static void	ft_get_map(t_maps *maps, int i)
 
 void	ft_make_map(char *txt, t_maps *maps)
 {
-	int	i;
-
 	maps->fd = open(txt, O_RDONLY);
 	if (maps->fd < 0)
 	{
@@ -70,11 +68,4 @@ void	ft_make_map(char *txt, t_maps *maps)
 		exit(EXIT_FAILURE);
 	}
 	ft_get_map(maps, 0);
-	i = 0;
-	while (maps->map[i])
-	{
-		printf("%s\n", maps->map[i]);
-		i++;
-	}
-	fflush(stdout);
 }

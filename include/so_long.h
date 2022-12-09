@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 00:44:56 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 01:29:34 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ typedef struct s_data
 	int		player_y;
 	int		hight;
 	int		width;
+	int		steps;
 
 }			t_data;
 

@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:25:16 by keys              #+#    #+#             */
-/*   Updated: 2022/12/09 23:17:18 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 01:29:51 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ void	ft_new_data(t_data **data, t_maps **maps)
 	(*data)->player_y = (*maps)->player_y;
 	(*data)->width = (*maps)->width;
 	(*data)->hight = (*maps)->hight;
+	(*data)->steps = 0;
 }
