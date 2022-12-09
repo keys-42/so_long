@@ -6,13 +6,13 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:42:25 by keys              #+#    #+#             */
-/*   Updated: 2022/12/09 21:16:33 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 01:22:46 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-static char	*ft_get_new_line(char *line)
+static char	*ft_get_new_line(char *line, t_maps *maps)
 {
 	size_t	len;
 	char	*new_line;
@@ -20,6 +20,10 @@ static char	*ft_get_new_line(char *line)
 	len = ft_strlen(line);
 	if (line[len - 1] == '\n')
 		new_line = ft_substr(line, 0, len - 1);
+	else
+		return (line);
+	if (!new_line)
+		ft_free_maps(&maps, 1, "malloc_failure");
 	free(line);
 	return (new_line);
 }
@@ -45,16 +49,20 @@ static void	ft_get_map(t_maps *maps, int i)
 		ft_get_map(maps, i);
 		return ;
 	}
-	if (maps->map_flag == 2)
-		ft_free_maps(&maps, 1, "map_failure");
-	maps->map_flag = 1;
-	ft_get_map(maps, i + 1);
-	line = ft_get_new_line(line);
-	maps->map[i] = line;
+	else
+	{
+		if (maps->map_flag == 2)
+			ft_free_maps(&maps, 1, "map_failure");
+		maps->map_flag = 1;
+		ft_get_map(maps, i + 1);
+		maps->map[i] = ft_get_new_line(line, maps);
+	}
 }
 
 void	ft_make_map(char *txt, t_maps *maps)
 {
+	int	i;
+
 	maps->fd = open(txt, O_RDONLY);
 	if (maps->fd < 0)
 	{
@@ -62,4 +70,11 @@ void	ft_make_map(char *txt, t_maps *maps)
 		exit(EXIT_FAILURE);
 	}
 	ft_get_map(maps, 0);
+	i = 0;
+	while (maps->map[i])
+	{
+		printf("%s\n", maps->map[i]);
+		i++;
+	}
+	fflush(stdout);
 }

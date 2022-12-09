@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 22:31:10 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 00:38:12 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 01:26:25 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,10 @@ void	ft_check_can_finish(t_maps *maps)
 {
 	ft_dfs_flag_ptr(maps);
 	ft_goal_search(maps->player_x, maps->player_y, maps);
-	if (maps->flag == 0 || ft_check_remnant(maps->dfs_flag))
+	if (maps->flag == 0)
 		ft_free_maps(&maps, 1, "You can't finish.");
+	if(ft_check_remnant(maps->dfs_flag))
+		ft_free_maps(&maps, 1, "You can't collect them all.");
 	ft_free_map(maps->dfs_flag);
 	maps->dfs_flag = NULL;
 }
