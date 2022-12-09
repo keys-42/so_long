@@ -20,7 +20,25 @@ MLX			=	$(MLXNAME)
 MLX_FLAGS_LINUX	=	-L$(MLXDIR) -lmlx -lXext -lX11
 
 
-SRCS		= 	srcs/main.c
+SRCS		= 	srcs/main.c	\
+				srcs/utils/get_struct.c \
+				srcs/checks/checks.c	\
+				srcs/checks/square.c	\
+				srcs/checks/wall.c	\
+				srcs/checks/player.c	\
+				srcs/checks/exit.c	\
+				srcs/checks/collectibles.c	\
+				srcs/checks/use_characters.c	\
+				srcs/checks/can_finish.c	\
+				srcs/utils/free.c	\
+				srcs/utils/utils.c	\
+				srcs/make/make_map.c	\
+				srcs/mlx/mlx.c	\
+				srcs/mlx/init.c	\
+				srcs/mlx/hook.c	\
+				srcs/mlx/paint.c \
+				srcs/mlx/map_swap.c
+
 
 OBJDIR   = obj
 OBJS  = $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
