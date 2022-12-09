@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 22:11:53 by keys              #+#    #+#             */
-/*   Updated: 2022/12/09 22:28:52 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 00:40:33 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ void	ft_check_use_characters(t_maps *maps)
 			if (ft_strchr(tmp, maps->map[i][j]) == NULL)
 			{
 				free(tmp);
-				ft_free_maps(&maps, 1,
-						"Contains characters that cannot be used.");
+				ft_free_maps(&maps, 1, "Some characters are not available.");
 			}
 			j++;
 		}

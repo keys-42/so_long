@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/09 23:47:15 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 00:44:56 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,20 @@
 
 # define PIXEL_HIGTH 1980
 # define PIXEL_WIDTH 1080
-# define WINDOWSIZE 50
+# define WINSIZ 50
 //shift
 # define ESC_KEY 65307
 # define UP_KEY 119
 # define DOWN_KEY 115
 # define LEFT_KEY 97
 # define RIGHT_KEY 100
+
+//images
+# define WALL "./images/wall-_1_.xpm"
+# define SPACE "./images/white-_1_.xpm"
+# define PLAYER "./images/sanji.xpm"
+# define COLL "./images/chopper.xpm"
+# define EXIT "./images/nami.xpm"
 
 typedef struct s_maps
 {
@@ -86,5 +93,6 @@ int			ft_close(int key_num, t_data *data);
 int			ft_painting(t_data *data);
 void		mlx_image_init(t_data *data);
 int			ft_map_swap(int key_num, t_data *data);
+void		ft_goal_search(int i, int j, t_maps *maps);
 
 #endif

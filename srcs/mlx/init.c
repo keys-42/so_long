@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 23:33:23 by keys              #+#    #+#             */
-/*   Updated: 2022/12/09 23:33:52 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 00:45:04 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,26 @@ void	mlx_image_init(t_data *data)
 	int	hight;
 	int	width;
 
-	hight = WINDOWSIZE;
-	width = WINDOWSIZE;
+	hight = WINSIZ;
+	width = WINSIZ;
 	data->wall_image = mlx_xpm_file_to_image(data->mlx,
-												"./images/wall-_1_.xpm",
+												WALL,
 												&hight,
 												&width);
 	data->space_image = mlx_xpm_file_to_image(data->mlx,
-												"./images/white-_1_.xpm",
+												SPACE,
 												&hight,
 												&width);
 	data->player_image = mlx_xpm_file_to_image(data->mlx,
-												"./images/sanji.xpm",
+												PLAYER,
 												&hight,
 												&width);
 	data->collection_image = mlx_xpm_file_to_image(data->mlx,
-													"./images/chopper.xpm",
+													COLL,
 													&hight,
 													&width);
 	data->exit_image = mlx_xpm_file_to_image(data->mlx,
-												"./images/nami.xpm",
+												EXIT,
 												&hight,
 												&width);
 }

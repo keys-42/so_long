@@ -30,6 +30,7 @@ SRCS		= 	srcs/main.c	\
 				srcs/checks/collectibles.c	\
 				srcs/checks/use_characters.c	\
 				srcs/checks/can_finish.c	\
+				srcs/checks/dfs.c	\
 				srcs/utils/free.c	\
 				srcs/utils/utils.c	\
 				srcs/make/make_map.c	\

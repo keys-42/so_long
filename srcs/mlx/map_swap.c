@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 23:35:03 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 00:18:09 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/10 00:41:47 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,39 +46,9 @@ void	ft_map_swap_utils(t_data *data, int y, int x)
 		data->player_x += x;
 	}
 }
-// void	ft_map_swap_utils(t_data *data, int y, int x)
-// {
-// 	int		flag;
-// 	char	c;
-
-// 	c = data->map[data->player_y + y][data->player_x + x];
-// 	printf("%c;%c\n", c, data->map[data->player_y][data->player_x]);
-// 	if (c != '1')
-// 	{
-// 		if (c == 'E')
-// 			ft_close(ESC_KEY, data);
-// 		if (c == '0')
-// 			flag = 0;
-// 		if (c == 'C')
-// 			flag = 1;
-// 		ft_swap(&(data->map[data->player_y][data->player_x]),
-// 				&(data->map[data->player_y + y][data->player_x + x]),
-// 				flag);
-// 		data->maps->player_y += y;
-// 		data->maps->player_x += x;
-// 	}
-// }
 
 int	ft_map_swap(int key_num, t_data *data)
 {
-	int	i;
-
-	i = 0;
-	while (i < data->hight)
-	{
-		printf("%s\n", data->map[i]);
-		i++;
-	}
 	if (key_num == ESC_KEY)
 	{
 		write(1, "ESC\n", 4);
