@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/11 16:02:56 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 17:58:25 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,14 @@
 # define WINSIZ 50
 //shift
 # define ESC_KEY 65307
-# define UP_KEY 119
-# define DOWN_KEY 115
-# define LEFT_KEY 97
-# define RIGHT_KEY 100
+# define W_KEY 119
+# define S_KEY 115
+# define A_KEY 97
+# define D_KEY 100
+# define UP_KEY 65362
+# define DOWN_KEY 65364
+# define LEFT_KEY 65361
+# define RIGHT_KEY 65363
 
 //images
 # define WALL "./images/wall-_1_.xpm"
@@ -90,11 +94,12 @@ void		ft_check_can_finish(t_maps *maps);
 void		ft_new_data(t_data **data, t_maps **maps);
 void		ft_free_data(t_data **data, int flag, char *error_message);
 void		ft_mlx_make(t_data *data);
-int			ft_close(int key_num, t_data *data);
 int			ft_painting(t_data *data);
 void		mlx_image_init(t_data *data);
 int			ft_map_swap(int key_num, t_data *data);
 void		ft_goal_search(int i, int j, t_maps *maps);
-int	ft_close_x(int key_num, t_data **data);
+int			ft_close_x(int key_num, t_data **data);
+int			ft_close(int key_num, t_data *data);
+int			ft_mlx_destroy(t_data *data);
 
 #endif

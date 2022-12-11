@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 23:35:03 by keys              #+#    #+#             */
-/*   Updated: 2022/12/11 15:18:11 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 18:00:19 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ int	ft_map_swap(int key_num, t_data *data)
 {
 	if (key_num == ESC_KEY)
 		ft_close(ESC_KEY, data);
-	if (key_num == UP_KEY)
+	if (key_num == UP_KEY || key_num == W_KEY)
 		ft_map_swap_utils(data, -1, 0);
-	if (key_num == RIGHT_KEY)
+	if (key_num == RIGHT_KEY || key_num == D_KEY)
 		ft_map_swap_utils(data, 0, 1);
-	if (key_num == LEFT_KEY)
+	if (key_num == LEFT_KEY || key_num == A_KEY)
 		ft_map_swap_utils(data, 0, -1);
-	if (key_num == DOWN_KEY)
+	if (key_num == DOWN_KEY || key_num == S_KEY)
 		ft_map_swap_utils(data, 1, 0);
 	return (0);
 }
