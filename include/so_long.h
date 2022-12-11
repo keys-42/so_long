@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/11 17:58:25 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 18:36:03 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 # define PIXEL_HIGTH 1980
 # define PIXEL_WIDTH 1080
-# define WINSIZ 50
+# define WINSIZ 4
 //shift
 # define ESC_KEY 65307
 # define W_KEY 119
