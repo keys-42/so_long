@@ -6,11 +6,17 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 20:13:40 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 01:22:19 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 16:48:24 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	prr(int i)
+{
+	printf("%d\n", i);
+	fflush(stdout);
+}
 
 void	ft_free_map(char **dst)
 {

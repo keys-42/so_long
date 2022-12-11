@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 17:42:25 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 01:38:30 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 16:53:09 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,21 @@ static char	*ft_get_new_line(char *line, t_maps *maps)
 	return (new_line);
 }
 
+static void	get_double_ptr(t_maps *maps, int i)
+{
+	maps->map = (char **)malloc((sizeof(char *) * (i + 1)));
+	if (!(maps->map))
+		ft_free_maps(&maps, 1, "malloc_failure");
+	maps->map[i] = NULL;
+}
+
 static void	ft_get_map(t_maps *maps, int i)
 {
 	char	*line;
 
 	line = get_next_line(maps->fd);
 	if (!line)
-	{
-		maps->map = (char **)malloc((sizeof(char *) * (i + 1)));
-		if (!(maps->map))
-			ft_free_maps(&maps, 1, "malloc_failure");
-		maps->map[i] = NULL;
-		return ;
-	}
+		return (get_double_ptr(maps, i));
 	else if (line[0] == '\n')
 	{
 		if (maps->map_flag == 1)

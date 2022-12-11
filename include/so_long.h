@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 02:04:11 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 01:29:34 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 16:02:56 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ int			ft_painting(t_data *data);
 void		mlx_image_init(t_data *data);
 int			ft_map_swap(int key_num, t_data *data);
 void		ft_goal_search(int i, int j, t_maps *maps);
+int	ft_close_x(int key_num, t_data **data);
 
 #endif

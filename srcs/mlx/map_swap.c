@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 23:35:03 by keys              #+#    #+#             */
-/*   Updated: 2022/12/10 01:39:23 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 15:18:11 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_map_swap_utils(t_data *data, int y, int x)
 		if (data->map[jy + y][ix + x] == 'E')
 		{
 			if (!(data->maps->collection_num))
-				ft_close(0, data);
+				ft_close(-1, data);
 			return ;
 		}
 		if (data->map[jy + y][ix + x] == 'C')
