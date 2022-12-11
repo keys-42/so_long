@@ -6,7 +6,7 @@
 /*   By: keys <keys@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 23:35:03 by keys              #+#    #+#             */
-/*   Updated: 2022/12/11 18:00:19 by keys             ###   ########.fr       */
+/*   Updated: 2022/12/11 18:07:17 by keys             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ void	ft_map_swap_utils(t_data *data, int y, int x)
 			data->map[jy + y][ix + x] = '0';
 		}
 		ft_swap(&(data->map[jy][ix]), &(data->map[jy + y][ix + x]));
-		printf("I walked %d times.\n", data->steps);
 		data->steps++;
+		printf("I walked %d times.\n", data->steps);
 		data->player_y += y;
 		data->player_x += x;
 	}
