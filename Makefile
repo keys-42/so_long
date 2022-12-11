@@ -2,8 +2,8 @@ NAME 		=	so_long
 CC			=	cc
 # CC			=	clang
 # CFLAGS		= -g -fsanitize=address -fsanitize=undefined
-CFLAGS		=	-Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined
-# CFLAGS		=	-Wall -Wextra -Werror
+# CFLAGS		=	-Wall -Wextra -Werror -g -fsanitize=address -fsanitize=undefined
+CFLAGS		=	-Wall -Wextra -Werror
 INCLUDE		=	-I ./include/
 
 GNLDIR		=	get_next_line

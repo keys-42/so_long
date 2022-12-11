@@ -1,0 +1,542 @@
+==19842== Memcheck, a memory error detector
+==19842== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==19842== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==19842== Command: ./so_long map/t_map03_minimam.ber
+==19842== Parent PID: 262
+==19842== 
+==19842== Invalid read of size 8
+==19842==    at 0x110E7C: ft_close (in /home/keys/so______________/so_long)
+==19842==    by 0x112681: mlx_loop (in /home/keys/so______________/so_long)
+==19842==    by 0x110D3A: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842==  Address 0x10d is not stack'd, malloc'd or (recently) free'd
+==19842== 
+==19842== 
+==19842== Process terminating with default action of signal 11 (SIGSEGV)
+==19842==  Access not within mapped region at address 0x10D
+==19842==    at 0x110E7C: ft_close (in /home/keys/so______________/so_long)
+==19842==    by 0x112681: mlx_loop (in /home/keys/so______________/so_long)
+==19842==    by 0x110D3A: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842==  If you believe this happened as a result of a stack
+==19842==  overflow in your program's main thread (unlikely but
+==19842==  possible), you can try to increase the size of the
+==19842==  main thread stack using the --main-stacksize= flag.
+==19842==  The main thread stack size used in this run was 8388608.
+==19842== 
+==19842== HEAP SUMMARY:
+==19842==     in use at exit: 136,307 bytes in 70 blocks
+==19842==   total heap usage: 20,708 allocs, 20,638 frees, 1,808,986 bytes allocated
+==19842== 
+==19842== 5 bytes in 1 blocks are still reachable in loss record 1 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x111ECB: ft_substr (in /home/keys/so______________/so_long)
+==19842==    by 0x110A1D: ft_get_new_line (in /home/keys/so______________/so_long)
+==19842==    by 0x110BBF: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110C2C: ft_make_map (in /home/keys/so______________/so_long)
+==19842==    by 0x10FC66: ft_checks (in /home/keys/so______________/so_long)
+==19842==    by 0x10F996: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 5 bytes in 1 blocks are still reachable in loss record 2 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x111ECB: ft_substr (in /home/keys/so______________/so_long)
+==19842==    by 0x110A1D: ft_get_new_line (in /home/keys/so______________/so_long)
+==19842==    by 0x110BBF: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110C2C: ft_make_map (in /home/keys/so______________/so_long)
+==19842==    by 0x10FC66: ft_checks (in /home/keys/so______________/so_long)
+==19842==    by 0x10F996: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 5 bytes in 1 blocks are still reachable in loss record 3 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x111ECB: ft_substr (in /home/keys/so______________/so_long)
+==19842==    by 0x110A1D: ft_get_new_line (in /home/keys/so______________/so_long)
+==19842==    by 0x110BBF: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110C2C: ft_make_map (in /home/keys/so______________/so_long)
+==19842==    by 0x10FC66: ft_checks (in /home/keys/so______________/so_long)
+==19842==    by 0x10F996: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 6 bytes in 1 blocks are still reachable in loss record 4 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x111719: ft_get_reline (in /home/keys/so______________/so_long)
+==19842==    by 0x111961: get_next_line (in /home/keys/so______________/so_long)
+==19842==    by 0x110AF2: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110C2C: ft_make_map (in /home/keys/so______________/so_long)
+==19842==    by 0x10FC66: ft_checks (in /home/keys/so______________/so_long)
+==19842==    by 0x10F996: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 10 bytes in 1 blocks are still reachable in loss record 5 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4A4F38E: strdup (strdup.c:42)
+==19842==    by 0x489B25E: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x4907C43: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A1E19: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 11 bytes in 1 blocks are still reachable in loss record 6 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A183C: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 16 bytes in 1 blocks are still reachable in loss record 7 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4BB0F81: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAF3FB: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAD8F5: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB1A2D: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x48B0D29: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 23 bytes in 1 blocks are still reachable in loss record 8 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4BD5577: XauFileName (in /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0)
+==19842==    by 0x4BD576C: XauGetBestAuthByAddr (in /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0)
+==19842==    by 0x4BB1E25: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB1FC2: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB1A1B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x48B0D29: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 24 bytes in 1 blocks are still reachable in loss record 9 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4A4F38E: strdup (strdup.c:42)
+==19842==    by 0x48A1385: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 29 bytes in 1 blocks are still reachable in loss record 10 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489C14D: _XUpdateAtomCache (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x489C519: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112306: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 32 bytes in 1 blocks are still reachable in loss record 11 of 56
+==19842==    at 0x483B723: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x483E017: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4BB0B9E: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB0C2B: xcb_get_extension_data (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAE13E: xcb_prefetch_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAE1B4: xcb_get_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x48A1CD8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 32 bytes in 1 blocks are still reachable in loss record 12 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4BB00C5: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BADE9E: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAF61E: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAF734: xcb_wait_for_reply (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB0C82: xcb_get_extension_data (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAE13E: xcb_prefetch_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BAE1B4: xcb_get_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x48A1CD8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 32 bytes in 1 blocks are still reachable in loss record 13 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x486C3CF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==19842==    by 0x48677B2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==19842==    by 0x112073: mlx_int_deal_shm (in /home/keys/so______________/so_long)
+==19842==    by 0x112315: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 33 bytes in 1 blocks are still reachable in loss record 14 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489C14D: _XUpdateAtomCache (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x489C519: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x1122EF: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 40 bytes in 1 blocks are still reachable in loss record 15 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x110A86: get_double_ptr (in /home/keys/so______________/so_long)
+==19842==    by 0x110B0E: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110B97: ft_get_map (in /home/keys/so______________/so_long)
+==19842==    by 0x110C2C: ft_make_map (in /home/keys/so______________/so_long)
+==19842==    by 0x10FC66: ft_checks (in /home/keys/so______________/so_long)
+==19842==    by 0x10F996: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 40 bytes in 1 blocks are still reachable in loss record 16 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B2DD1: _XPollfdCacheInit (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A166F: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 48 bytes in 1 blocks are still reachable in loss record 17 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B0CB1: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 48 bytes in 1 blocks are still reachable in loss record 18 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B0CC7: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 64 bytes in 1 blocks are still reachable in loss record 19 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x10FA00: ft_new_maps (in /home/keys/so______________/so_long)
+==19842==    by 0x10F983: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 72 bytes in 1 blocks are still reachable in loss record 20 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A1721: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 88 bytes in 1 blocks are still reachable in loss record 21 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E60: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110D8E: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 88 bytes in 1 blocks are still reachable in loss record 22 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E60: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110DB5: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 88 bytes in 1 blocks are still reachable in loss record 23 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E60: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110DDC: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 88 bytes in 1 blocks are still reachable in loss record 24 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E60: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110E03: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 88 bytes in 1 blocks are still reachable in loss record 25 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E60: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110E2A: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 96 bytes in 1 blocks are still reachable in loss record 26 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x10FAE5: ft_new_data (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9A9: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 104 bytes in 1 blocks are still reachable in loss record 27 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B0BB2: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 112 bytes in 1 blocks are still reachable in loss record 28 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A19A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 128 bytes in 1 blocks are still reachable in loss record 29 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A18D0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 128 bytes in 1 blocks are still reachable in loss record 30 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489B24E: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x4907C43: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A1E19: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 128 bytes in 1 blocks are still reachable in loss record 31 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489B38E: XAddExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x486C5CA: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==19842==    by 0x48677B2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==19842==    by 0x112073: mlx_int_deal_shm (in /home/keys/so______________/so_long)
+==19842==    by 0x112315: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 136 bytes in 1 blocks are still reachable in loss record 32 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x11224F: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 136 bytes in 1 blocks are still reachable in loss record 33 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489AED6: XCreateImage (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x113EB1: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110D8E: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 136 bytes in 1 blocks are still reachable in loss record 34 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489AED6: XCreateImage (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x113EB1: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110DB5: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 136 bytes in 1 blocks are still reachable in loss record 35 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489AED6: XCreateImage (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x113EB1: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110DDC: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 136 bytes in 1 blocks are still reachable in loss record 36 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489AED6: XCreateImage (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x113EB1: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110E03: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 136 bytes in 1 blocks are still reachable in loss record 37 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489AED6: XCreateImage (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x113EB1: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110E2A: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 152 bytes in 1 blocks are still reachable in loss record 38 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4907E3E: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A1E19: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 160 bytes in 1 blocks are still reachable in loss record 39 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x488F82F: XCreateGC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A1D48: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 160 bytes in 1 blocks are still reachable in loss record 40 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x488F82F: XCreateGC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x11248E: mlx_new_window (in /home/keys/so______________/so_long)
+==19842==    by 0x110CA6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 168 bytes in 1 blocks are still reachable in loss record 41 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A1C37: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 208 bytes in 1 blocks are still reachable in loss record 42 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B453E: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B10B6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B1B10: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B0039: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112795: mlx_int_wait_first_expose (in /home/keys/so______________/so_long)
+==19842==    by 0x1124CD: mlx_new_window (in /home/keys/so______________/so_long)
+==19842==    by 0x110CA6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 512 bytes in 1 blocks are still reachable in loss record 43 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x489C0BA: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x489C43E: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x1122EF: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 936 bytes in 1 blocks are still reachable in loss record 44 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x1123F0: mlx_new_window (in /home/keys/so______________/so_long)
+==19842==    by 0x110CA6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 1,456 bytes in 7 blocks are still reachable in loss record 45 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B453E: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B10B6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B19E1: _XEventsQueued (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x4892CCD: XFlush (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x113F27: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110D8E: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 1,664 bytes in 8 blocks are still reachable in loss record 46 of 56
+==19842==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48B453E: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B10B6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B1B59: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48B0039: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112795: mlx_int_wait_first_expose (in /home/keys/so______________/so_long)
+==19842==    by 0x1124CD: mlx_new_window (in /home/keys/so______________/so_long)
+==19842==    by 0x110CA6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 1,740 bytes in 1 blocks are still reachable in loss record 47 of 56
+==19842==    at 0x483DFAF: realloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4BADA62: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB1A2D: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x48B0D29: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 3,584 bytes in 2 blocks are still reachable in loss record 48 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A1A24: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 4,688 bytes in 1 blocks are still reachable in loss record 49 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A1371: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 15,200 bytes in 1 blocks are still reachable in loss record 50 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E84: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110E2A: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 16,384 bytes in 1 blocks are still reachable in loss record 51 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x48A16BF: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 16,400 bytes in 1 blocks are still reachable in loss record 52 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E84: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110D8E: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 16,400 bytes in 1 blocks are still reachable in loss record 53 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E84: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110DB5: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 16,400 bytes in 1 blocks are still reachable in loss record 54 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E84: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110DDC: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 16,400 bytes in 1 blocks are still reachable in loss record 55 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x113E84: mlx_int_new_image (in /home/keys/so______________/so_long)
+==19842==    by 0x1130DA: mlx_int_parse_xpm (in /home/keys/so______________/so_long)
+==19842==    by 0x1134F1: mlx_xpm_file_to_image (in /home/keys/so______________/so_long)
+==19842==    by 0x110E03: mlx_image_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110CB6: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== 21,168 bytes in 1 blocks are still reachable in loss record 56 of 56
+==19842==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19842==    by 0x4BAD884: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x4BB1A2D: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==19842==    by 0x48B0D29: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x48A13A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+==19842==    by 0x112267: mlx_init (in /home/keys/so______________/so_long)
+==19842==    by 0x110C4E: ft_mlx_make (in /home/keys/so______________/so_long)
+==19842==    by 0x10F9B5: main (in /home/keys/so______________/so_long)
+==19842== 
+==19842== LEAK SUMMARY:
+==19842==    definitely lost: 0 bytes in 0 blocks
+==19842==    indirectly lost: 0 bytes in 0 blocks
+==19842==      possibly lost: 0 bytes in 0 blocks
+==19842==    still reachable: 136,307 bytes in 70 blocks
+==19842==         suppressed: 0 bytes in 0 blocks
+==19842== 
+==19842== For lists of detected and suppressed errors, rerun with: -s
+==19842== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
